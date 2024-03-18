@@ -1694,7 +1694,6 @@ function top_httphead($contenttype = 'text/html', $forcenocache = 0)
 			$hookmanager = new HookManager($db);
 		}
 		$hookmanager->initHooks(array("main"));
-
 		$parameters = array('contentsecuritypolicy' => $contentsecuritypolicy, 'mode' => 'active');
 		$result = $hookmanager->executeHooks('setContentSecurityPolicy', $parameters); // Note that $action and $object may have been modified by some hooks
 		if ($result > 0) {
